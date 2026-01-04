@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages - Chat Application</title>
+    <meta name="description" content="Modern professional chat application with glassmorphism design">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="chat.css">
+</head>
+<body>
+    <div class="chat-container">
+        <!-- Left Sidebar - Contact List -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h1 class="sidebar-title">Messages</h1>
+                <button class="btn-icon" id="search-btn" aria-label="Search">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <div class="contacts-list">
+                <!-- Contact Item 1 -->
+                <div class="contact-item active" data-contact-id="1">
+                    <div class="avatar-wrapper">
+                        <img src="https://i.pravatar.cc/150?img=12" alt="Diego Bouldasar" class="avatar">
+                        <span class="status-indicator online"></span>
+                    </div>
+                    <div class="contact-info">
+                        <div class="contact-header">
+                            <h3 class="contact-name">Diego Bouldasar</h3>
+                            <span class="message-time">19:58</span>
+                        </div>
+                        <div class="contact-preview">
+                            <p class="last-message">Have you started investing in real...</p>
+                            <span class="unread-badge">2</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Item 2 -->
+                <div class="contact-item" data-contact-id="2">
+                    <div class="avatar-wrapper">
+                        <img src="https://i.pravatar.cc/150?img=45" alt="Noey Tomes" class="avatar">
+                        <span class="status-indicator online"></span>
+                    </div>
+                    <div class="contact-info">
+                        <div class="contact-header">
+                            <h3 class="contact-name">Noey Tomes</h3>
+                            <span class="message-time">18:18</span>
+                        </div>
+                        <div class="contact-preview">
+                            <p class="last-message">Great! I'll see you tomorrow</p>
+                            <span class="unread-badge">1</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Item 3 -->
+                <div class="contact-item" data-contact-id="3">
+                    <div class="avatar-wrapper">
+                        <img src="https://i.pravatar.cc/150?img=33" alt="Offort Bouldasar" class="avatar">
+                        <span class="status-indicator"></span>
+                    </div>
+                    <div class="contact-info">
+                        <div class="contact-header">
+                            <h3 class="contact-name">Offort Bouldasar</h3>
+                            <span class="message-time">16:58</span>
+                        </div>
+                        <div class="contact-preview">
+                            <p class="last-message">How's what you need?</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Item 4 -->
+                <div class="contact-item" data-contact-id="4">
+                    <div class="avatar-wrapper">
+                        <img src="https://i.pravatar.cc/150?img=27" alt="Kaes Learno" class="avatar">
+                        <span class="status-indicator"></span>
+                    </div>
+                    <div class="contact-info">
+                        <div class="contact-header">
+                            <h3 class="contact-name">Kaes Learno</h3>
+                            <span class="message-time">12:52</span>
+                        </div>
+                        <div class="contact-preview">
+                            <p class="last-message">It's great. Let's schedule...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Item 5 -->
+                <div class="contact-item" data-contact-id="5">
+                    <div class="avatar-wrapper">
+                        <img src="https://i.pravatar.cc/150?img=48" alt="Kalemer Kristofno" class="avatar">
+                        <span class="status-indicator online"></span>
+                    </div>
+                    <div class="contact-info">
+                        <div class="contact-header">
+                            <h3 class="contact-name">Kalemer Kristofno</h3>
+                            <span class="message-time">20:33</span>
+                        </div>
+                        <div class="contact-preview">
+                            <p class="last-message">You have great potential</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Item 6 -->
+                <div class="contact-item" data-contact-id="6">
+                    <div class="avatar-wrapper">
+                        <img src="https://i.pravatar.cc/150?img=8" alt="Kaétége Erik" class="avatar">
+                        <span class="status-indicator"></span>
+                    </div>
+                    <div class="contact-info">
+                        <div class="contact-header">
+                            <h3 class="contact-name">Kaétége Erik</h3>
+                            <span class="message-time">09:18</span>
+                        </div>
+                        <div class="contact-preview">
+                            <p class="last-message">The project is going well</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Item 7 -->
+                <div class="contact-item" data-contact-id="7">
+                    <div class="avatar-wrapper">
+                        <img src="https://i.pravatar.cc/150?img=65" alt="Hiopollo Donisi" class="avatar">
+                        <span class="status-indicator online"></span>
+                    </div>
+                    <div class="contact-info">
+                        <div class="contact-header">
+                            <h3 class="contact-name">Hiopollo Donisi</h3>
+                            <span class="message-time">15:30</span>
+                        </div>
+                        <div class="contact-preview">
+                            <p class="last-message">Thank you for your help!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Item 8 -->
+                <div class="contact-item" data-contact-id="8">
+                    <div class="avatar-wrapper">
+                        <img src="https://i.pravatar.cc/150?img=31" alt="Heidi Dominika" class="avatar">
+                        <span class="status-indicator"></span>
+                    </div>
+                    <div class="contact-info">
+                        <div class="contact-header">
+                            <h3 class="contact-name">Heidi Dominika</h3>
+                            <span class="message-time">12 May</span>
+                        </div>
+                        <div class="contact-preview">
+                            <p class="last-message">Let's catch up this week</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Item 9 -->
+                <div class="contact-item" data-contact-id="9">
+                    <div class="avatar-wrapper">
+                        <img src="https://i.pravatar.cc/150?img=23" alt="Elough Imre" class="avatar">
+                        <span class="status-indicator online"></span>
+                    </div>
+                    <div class="contact-info">
+                        <div class="contact-header">
+                            <h3 class="contact-name">Elough Imre</h3>
+                            <span class="message-time">12:45</span>
+                        </div>
+                        <div class="contact-preview">
+                            <p class="last-message">Perfect! See you soon</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="add-contact-btn" id="add-contact-sidebar">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <line x1="19" y1="8" x2="19" y2="14"></line>
+                    <line x1="22" y1="11" x2="16" y2="11"></line>
+                </svg>
+                Add Contact
+            </button>
+        </aside>
+
+        <!-- Main Chat Area -->
+        <main class="chat-main">
+            <!-- Chat Header -->
+            <header class="chat-header">
+                <div class="chat-user-info">
+                    <img src="https://i.pravatar.cc/150?img=12" alt="Diego Bouldasar" class="header-avatar">
+                    <div class="header-user-details">
+                        <h2 class="header-username">Diego Bouldasar</h2>
+                        <span class="header-status">Active now</span>
+                    </div>
+                </div>
+                <div class="chat-actions">
+                    <button class="btn-icon" id="call-btn" aria-label="Voice call">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                    </button>
+                    <button class="btn-icon" id="video-btn" aria-label="Video call">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="23 7 16 12 23 17 23 7"></polygon>
+                            <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
+                        </svg>
+                    </button>
+                    <button class="btn-icon" id="menu-btn" aria-label="More options">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="1"></circle>
+                            <circle cx="12" cy="5" r="1"></circle>
+                            <circle cx="12" cy="19" r="1"></circle>
+                        </svg>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Messages Container -->
+            <div class="messages-container" id="messages-container">
+                <!-- Received Message -->
+                <div class="message received">
+                    <img src="https://i.pravatar.cc/150?img=12" alt="Diego" class="message-avatar">
+                    <div class="message-bubble">
+                        <p class="message-text">I'm cautious about cryptos. It's unpredictable.</p>
+                        <span class="message-timestamp">19:45</span>
+                    </div>
+                </div>
+
+                <!-- Sent Message -->
+                <div class="message sent">
+                    <div class="message-bubble">
+                        <p class="message-text">Yeah, but the potential returns are worth considering!</p>
+                        <span class="message-timestamp">19:47</span>
+                    </div>
+                </div>
+
+                <!-- Received Message -->
+                <div class="message received">
+                    <img src="https://i.pravatar.cc/150?img=12" alt="Diego" class="message-avatar">
+                    <div class="message-bubble">
+                        <p class="message-text">That's what I've heard. Any advice on where to start?</p>
+                        <span class="message-timestamp">19:50</span>
+                    </div>
+                </div>
+
+                <!-- Sent Message -->
+                <div class="message sent">
+                    <div class="message-bubble">
+                        <p class="message-text">Have you started investing in real estate?</p>
+                        <span class="message-timestamp">19:52</span>
+                    </div>
+                </div>
+
+                <!-- Typing Indicator -->
+                <div class="typing-indicator">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+
+            <!-- Message Input Area -->
+            <div class="message-input-area">
+                <button class="btn-icon" id="attach-btn" aria-label="Attach file">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"></path>
+                    </svg>
+                </button>
+                
+                <div class="input-wrapper">
+                    <input 
+                        type="text" 
+                        id="message-input" 
+                        class="message-input" 
+                        placeholder="I mean have you |"
+                        autocomplete="off"
+                    >
+                </div>
+
+                <button class="btn-icon" id="voice-btn" aria-label="Voice message">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+                        <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                        <line x1="12" y1="19" x2="12" y2="23"></line>
+                        <line x1="8" y1="23" x2="16" y2="23"></line>
+                    </svg>
+                </button>
+
+                <button class="btn-send" id="send-btn">
+                    <span>Send</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                </button>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
