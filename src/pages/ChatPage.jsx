@@ -1,8 +1,8 @@
-import SideBar from "../components/SideBar";
+import SideBar from "../components/SideBar/SideBar";
 import "../CSS/pages/homepage.css"
-import ChatWindow from "../components/ChatWindow";
+import ChatWindow from "../components/ChatWindow/ChatWindow";
 
-function HomePage() {
+function ChatPage() {
     return (
         <div className="chat-container">
             
@@ -13,4 +13,4 @@ function HomePage() {
     );
 }
 
-export default HomePage;
+export default ChatPage;
