@@ -1,17 +1,17 @@
 import { currentSession } from "../../data/current.session"
-import { messages } from "../../data/messages.dummy"
 import { users } from "../../data/users.dummy"
 
-function MessageList({ currentChatId }) {
-    const messageList = messages.map(message => {
-        if (message.chatId === currentChatId) {
-            const userId = users.find(user => user.id === message.senderId)
+function MessageList({ currentChatId, message }) {
+    const messageList = message.map(m => {
+        if (m.chatId === currentChatId) {
+            const userId = users.find(user => m.senderId === user.id)
+            console.log(userId.avatar)
             return (
-                <div className={message.senderId === currentSession.id ? 'message sent' : "message received"} key={message.id}>
+                <div className={m.senderId === currentSession.id ? 'message sent' : "message received"} key={m.id}>
                     <img src={userId.avatar} alt="Diego" className="message-avatar" />
                     <div className="message-bubble">
-                        <p className="message-text">{message.text}</p>
-                        <span className="message-timestamp">{message.time}</span>
+                        <p className="message-text">{m.text}</p>
+                        <span className="message-timestamp">{m.time}</span>
                     </div>
                 </div>
             )

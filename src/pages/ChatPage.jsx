@@ -5,6 +5,7 @@ import { useState } from "react";
 
 function ChatPage() {
     const [currentChatId, setCurrentChatId] = useState('c1')
+    
     return (
         <div className="chat-container">
             
