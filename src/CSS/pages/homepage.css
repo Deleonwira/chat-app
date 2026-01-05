@@ -4,32 +4,32 @@
 :root {
     /* Colors - Glassmorphism Palette */
     --color-bg-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    --color-glass-bg: rgba(255, 255, 255, 0.08);
+    --color-glass-bg: rgba(36, 34, 34, 0.55);
     --color-glass-border: rgba(255, 255, 255, 0.18);
-    --color-glass-shadow: rgba(0, 0, 0, 0.1);
-    
+    --color-glass-shadow: rgba(0, 0, 0, 0.9);
+
     /* Text Colors */
     --color-text-primary: #ffffff;
     --color-text-secondary: rgba(255, 255, 255, 0.7);
     --color-text-tertiary: rgba(255, 255, 255, 0.5);
-    
+
     /* Accent Colors */
     --color-accent-green: #4ade80;
     --color-accent-green-hover: #22c55e;
     --color-online: #10b981;
     --color-unread-bg: #ef4444;
-    
+
     /* Message Bubbles */
     --color-message-received: rgba(255, 255, 255, 0.12);
     --color-message-sent: rgba(76, 175, 80, 0.25);
-    
+
     /* Spacing */
     --spacing-xs: 0.25rem;
     --spacing-sm: 0.5rem;
     --spacing-md: 1rem;
     --spacing-lg: 1.5rem;
-    --spacing-xl: 2rem;
-    
+    --spacing-xl: 8rem;
+
     /* Typography */
     --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     --font-size-xs: 0.75rem;
@@ -37,18 +37,18 @@
     --font-size-base: 1rem;
     --font-size-lg: 1.125rem;
     --font-size-xl: 1.25rem;
-    
+
     /* Border Radius */
     --radius-sm: 0.5rem;
     --radius-md: 1rem;
     --radius-lg: 1.5rem;
     --radius-full: 50%;
-    
+
     /* Shadows */
     --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
     --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.15);
-    --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.2);
-    
+    --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
+
     /* Transitions */
     --transition-fast: 0.15s ease;
     --transition-base: 0.3s ease;
@@ -92,8 +92,15 @@ body::before {
 }
 
 @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-20px); }
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
 }
 
 button {
@@ -121,7 +128,6 @@ img {
 .chat-container {
     display: flex;
     height: 100vh;
-    max-width: 1800px;
     margin: 0 auto;
     padding: var(--spacing-xl);
     gap: var(--spacing-lg);
@@ -131,9 +137,9 @@ img {
    SIDEBAR - CONTACT LIST
    ============================================ */
 .sidebar {
-    flex: 0 0 400px;
+    flex: 0 0 350px;
     background: var(--color-glass-bg);
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(20px);
     border: 1px solid var(--color-glass-border);
     border-radius: var(--radius-lg);
@@ -248,8 +254,15 @@ img {
 }
 
 @keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.6; }
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.6;
+    }
 }
 
 /* Contact Info */
@@ -341,7 +354,7 @@ img {
 .chat-main {
     flex: 1;
     background: var(--color-glass-bg);
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(20px);
     border: 1px solid var(--color-glass-border);
     border-radius: var(--radius-lg);
@@ -463,6 +476,7 @@ img {
         opacity: 0;
         transform: translateY(10px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -554,10 +568,14 @@ img {
 }
 
 @keyframes typing {
-    0%, 60%, 100% {
+
+    0%,
+    60%,
+    100% {
         transform: translateY(0);
         opacity: 0.7;
     }
+
     30% {
         transform: translateY(-10px);
         opacity: 1;
@@ -646,15 +664,15 @@ img {
         padding: var(--spacing-md);
         gap: var(--spacing-md);
     }
-    
+
     .sidebar {
         flex: 0 0 280px;
     }
-    
+
     .contact-name {
         font-size: var(--font-size-sm);
     }
-    
+
     .last-message {
         font-size: var(--font-size-xs);
     }
@@ -665,7 +683,7 @@ img {
         padding: var(--spacing-sm);
         gap: var(--spacing-sm);
     }
-    
+
     .sidebar {
         position: absolute;
         left: var(--spacing-sm);
@@ -676,20 +694,20 @@ img {
         transform: translateX(-110%);
         transition: transform var(--transition-base);
     }
-    
+
     .sidebar.active {
         transform: translateX(0);
     }
-    
+
     .message {
         max-width: 85%;
     }
-    
+
     .message-input-area {
         gap: var(--spacing-sm);
         padding: var(--spacing-md);
     }
-    
+
     .btn-send span {
         display: none;
     }
@@ -699,23 +717,23 @@ img {
     .chat-container {
         padding: 0;
     }
-    
+
     .chat-main {
         border-radius: 0;
     }
-    
+
     .message {
         max-width: 90%;
     }
-    
+
     .header-username {
         font-size: var(--font-size-base);
     }
-    
+
     .chat-actions {
         gap: 4px;
     }
-    
+
     .btn-icon {
         width: 36px;
         height: 36px;
@@ -734,6 +752,11 @@ img {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }

@@ -5,11 +5,14 @@ import { useState } from "react";
 
 function ChatPage() {
     const [currentChatId, setCurrentChatId] = useState('c1')
-    
+    const [backgroundUrl, setBackgroundUrl] = useState('')
+
     return (
-        <div className="chat-container">
-            
-            <SideBar setCurrentChatId={setCurrentChatId} />
+        <div className="chat-container" style={{
+            background: backgroundUrl ? `url(${backgroundUrl}) center center / cover no-repeat` : undefined
+        }}>
+
+            <SideBar setCurrentChatId={setCurrentChatId} setBackgroundUrl={setBackgroundUrl} />
 
             <ChatWindow currentChatId={currentChatId} />
         </div>
