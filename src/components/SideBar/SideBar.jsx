@@ -1,13 +1,16 @@
 
 import ContactList from "./ContactList";
 import SidebarHeader from "./SidebarHeader";
-function SideBar({ setCurrentChatId, setBackgroundUrl }) {
+function SideBar({ setCurrentChatId, setBackgroundUrl, message }) {
     return (
         <aside className="sidebar">
 
             <SidebarHeader />
 
-            <ContactList setCurrentChatId={setCurrentChatId} />
+            <ContactList
+                setCurrentChatId={setCurrentChatId}
+                message={message}
+            />
 
             <div style={{ display: 'flex', gap: '8px', padding: '16px' }}>
                 <button className="add-contact-btn" id="add-contact-sidebar" style={{ flex: 1, margin: 0 }}>

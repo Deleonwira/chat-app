@@ -5,7 +5,6 @@ function MessageList({ currentChatId, message }) {
     const messageList = message.map(m => {
         if (m.chatId === currentChatId) {
             const userId = users.find(user => m.senderId === user.id)
-            console.log(userId.avatar)
             return (
                 <div className={m.senderId === currentSession.id ? 'message sent' : "message received"} key={m.id}>
                     <img src={userId.avatar} alt="Diego" className="message-avatar" />

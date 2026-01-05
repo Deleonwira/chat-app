@@ -1,11 +1,10 @@
 import ChatHeader from "./ChatHeader";
 import MessageList from "./MessageList";
 import ChatInput from "./ChatInput";
-import { useState } from "react";
-import { messages } from "../../data/messages.dummy"
 
-function ChatWindow({ currentChatId }) {
-    const [message, setMessage] = useState(messages)
+
+function ChatWindow({ currentChatId, message, setMessage }) {
+
     return (
         <main className="chat-main">
             <ChatHeader

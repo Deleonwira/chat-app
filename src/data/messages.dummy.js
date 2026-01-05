@@ -19,7 +19,7 @@ export const messages = [
     chatId: "c1",
     senderId: "u2",
     text: "..",
-    time: "19:47"
+    time: "19:57"
   },
 
   {
@@ -27,6 +27,6 @@ export const messages = [
     chatId: "c2",
     senderId: "u1",
     text: "c2-1",
-    time: "19:47"
+    time: "18:01"
   }
 ];

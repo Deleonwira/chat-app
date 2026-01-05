@@ -4,9 +4,9 @@ import { currentSession } from "../../data/current.session";
 function ChatInput({ message, setMessage, currentChatId }) {
     const [text, setText] = useState('')
 
-    useEffect(() => {
-        console.log(message);
-    }, [message]);
+    // useEffect(() => {
+    //     console.log(message);
+    // }, [message]);
 
 
     function handleSendMessage() {
@@ -23,7 +23,7 @@ function ChatInput({ message, setMessage, currentChatId }) {
 
         setMessage((prev) => [...prev, newMessage])
 
-        
+
 
     }
 
