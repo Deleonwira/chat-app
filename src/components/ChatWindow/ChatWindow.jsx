@@ -1,13 +1,12 @@
 import ChatHeader from "./ChatHeader";
 import MessageList from "./MessageList";
 import ChatInput from "./ChatInput";
-function ChatWindow (){
+function ChatWindow ({currentChatId}){
+    
     return (
         <main className="chat-main">
-                <ChatHeader />
-
-                <MessageList />
-
+                <ChatHeader currentChatId = {currentChatId} />
+                <MessageList currentChatId={currentChatId} />
                 <ChatInput />
             </main>
     )

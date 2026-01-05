@@ -1,12 +1,13 @@
 
 import ContactList from "./ContactList";
 import SidebarHeader from "./SidebarHeader";
-function SideBar(){
+function SideBar({setCurrentChatId}){
     return (
         <aside className="sidebar">
+
                 <SidebarHeader />
 
-                <ContactList />
+                <ContactList setCurrentChatId={setCurrentChatId} />
 
                 <button className="add-contact-btn" id="add-contact-sidebar">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
